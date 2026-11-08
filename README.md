@@ -1,60 +1,57 @@
-# Student Study Planner
+# 📚 Student Study Planner
 
-A study planner web app to add subjects, tasks and deadlines.
+A clean, beginner-friendly study planner web app that helps students organise their study tasks by subject, topic, due date and priority — right in the browser, with no sign-up and no server needed.
 
-## Features
+Tasks are saved in the browser's `localStorage`, so your plan is still there when you come back.
 
-- Add subjects with a colour for easy identification
-- Add study tasks with a subject, due date and priority
-- Mark tasks as complete and delete finished or unwanted tasks
-- See upcoming deadlines at a glance, sorted by due date
-- Filter tasks by subject or show only incomplete tasks
-- Progress summary showing how many tasks are done
-- Data saved in the browser with localStorage, so tasks survive a refresh
+## ✨ Features
 
-## Tech Stack
+- **Add study tasks** with a subject, topic/task name, due date and priority (High / Medium / Low)
+- **Form validation** with clear error messages so nothing important is missed
+- **Tasks sorted by due date**, with pending tasks shown before completed ones
+- **Mark tasks as done / undo** and **delete** tasks you no longer need
+- **Priority badges** — colour-coded High (red), Medium (amber) and Low (green)
+- **Overdue highlighting** — pending tasks past their due date are highlighted in red, and tasks due today are marked
+- **Filters** — view All, Pending or Completed tasks, and filter by subject
+- **Progress summary** — see "x of y tasks done" with a percentage progress bar
+- **Persistent storage** — everything is saved automatically in `localStorage`
+- **Fully responsive** — works nicely on mobile and desktop
 
-- HTML5 - structure and forms
-- CSS3 - layout, responsive design and styling
-- JavaScript - task management, filtering and localStorage
-- No build tools, frameworks or server required
+## 🚀 How to Run
 
-## How to Run / Usage
+No installation or build step is needed:
 
-1. Clone the repository:
+1. Download or clone this repository.
+2. Open `index.html` in any modern web browser (double-click the file, or use a simple local server such as VS Code's Live Server extension).
 
-   ```bash
-   git clone https://github.com/UUUU41/student-study-planner.git
-   cd student-study-planner
-   ```
+That's it — start adding your study tasks!
 
-2. Open `index.html` in any modern web browser, or serve the folder:
+## 🛠️ Tech Stack
 
-   ```bash
-   python3 -m http.server 8000
-   ```
+- **HTML5** — page structure and form
+- **CSS3** — modern indigo/teal design, CSS grid, responsive layout
+- **Vanilla JavaScript** — all app logic, DOM rendering and `localStorage` persistence (no libraries or frameworks)
 
-   Then visit `http://localhost:8000`.
+## 📁 Project Structure
 
-3. Type a task, choose a subject and a due date, then click Add Task. Tick the checkbox to complete a task, or use Delete to remove it.
-
-## Project Structure
-
-```text
+```
 student-study-planner/
-- index.html   (page structure and forms)
-- app.js       (task logic, filtering and localStorage)
-- README.md    (project documentation)
+├── index.html   # Page structure: header, add-task form, filters, task list, footer
+├── style.css    # All styling, priority badges, overdue/done states, responsive rules
+├── app.js       # Task logic: add, complete, delete, filter, progress, localStorage
+└── README.md    # This file
 ```
 
-## Future Improvements
+## 🔮 Future Improvements
 
-- Add reminders and a study timer (Pomodoro)
-- Add a weekly calendar view
-- Add subject-wise progress charts
-- Sync tasks across devices with a backend
-- Export tasks to CSV or PDF
+- Edit an existing task instead of delete-and-re-add
+- Reminder notifications before a task is due
+- Weekly study timetable view
+- Export / import tasks as a JSON or CSV file
+- Dark mode toggle
+- Drag-and-drop manual ordering of tasks
 
-## Author
+## 👤 Author
 
-Chandan Yadav (UUUU41) - https://github.com/UUUU41
+**Chandan Yadav** — BCA student and frontend developer from India.
+GitHub: [@UUUU41](https://github.com/UUUU41)
