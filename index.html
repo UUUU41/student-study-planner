@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Student Study Planner</title>
+  <style>
+    body { font-family: system-ui, sans-serif; max-width: 720px; margin: 2rem auto; padding: 0 1rem; line-height: 1.5; }
+    form, .filters { display: flex; gap: 0.5rem; flex-wrap: wrap; margin: 1rem 0; }
+    input, select, button { padding: 0.5rem; font-size: 1rem; }
+    button { cursor: pointer; }
+    li { margin: 0.5rem 0; }
+    li.done span { text-decoration: line-through; color: #666; }
+    .overdue { color: #b00020; font-weight: 600; }
+  </style>
+</head>
+<body>
+  <h1>Student Study Planner</h1>
+  <p>Add subjects, tasks and deadlines, then tick tasks off as you finish them.</p>
+  <form id="task-form">
+    <input id="task-input" type="text" placeholder="Task, e.g. Revise Chapter 5" required>
+    <input id="subject-input" type="text" placeholder="Subject, e.g. Maths" required>
+    <input id="date-input" type="date" required>
+    <select id="priority-input">
+      <option value="Low">Low priority</option>
+      <option value="Medium" selected>Medium priority</option>
+      <option value="High">High priority</option>
+    </select>
+    <button type="submit">Add Task</button>
+  </form>
+  <div class="filters">
+    <label>Filter by subject: <select id="filter-subject"><option value="">All subjects</option></select></label>
+    <label><input type="checkbox" id="hide-done"> Hide completed</label>
+  </div>
+  <p id="summary"></p>
+  <ul id="task-list"></ul>
+  <script src="app.js"></script>
+</body>
+</html>
